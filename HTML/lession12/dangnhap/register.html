@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="register.html">Đăng kí</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="form_">
+            <form method="post" action="#" onsubmit="return check()">
+                <div class="row">
+                    <label for="name_id">Tên</label>
+                    <input type="text" name="Ten" id="name_id" value="" required>
+                </div>
+                <div class="row">
+                    <label for="age_id">Tuổi</label>
+                    <input type="number" name="Tuoi" id="age_id" value="" required>
+                </div>
+                <div class="row">
+                    <label for="email_id">E-mail</label>
+                    <input type="email" name="Email" id="email_id" value="" required> 
+                    <span id="e_da_dk" style="display: none; color: red;">Email này đã được đăng kí</span>
+                </div>
+                <div class="row">
+                    <label for="password_id">Password</label>
+                    <input type="password" name="pass" id="password_id" value="" required>
+                <div class="row row_2">
+                    <button type="submit">Đăng kí</button>
+                    <button type="reset">Reset</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div id="gicungduoc">
+        <div class="bangthongbao">
+            <div class="thongbao"><p>Đăng kí thành công</p></div>
+            <div class="ok" onclick="xac_nhan()"><button>Ok</button></div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var json = localStorage.getItem('myJson')
+        var myJson = JSON.parse(json)
+        var dataList = [], index = -1
+        var data = {
+            'name': '',
+            'age': '',
+            'email': '',
+            'password': ''
+        }
+        if(myJson != null && myJson != ''){
+            dataList = myJson
+        }
+        var nameTag = document.getElementById('name_id'),
+        ageTag = document.getElementById('age_id'),
+        emailTag = document.getElementById('email_id'),
+        passwordTag = document.getElementById('password_id')
+        function check(){          
+                    data = {
+                        'name': nameTag.value,
+                        'age' : ageTag.value,
+                        'email': emailTag.value,
+                        'password': passwordTag.value
+                    }
+                    dataList.push(data)
+            json = JSON.stringify(dataList)
+            localStorage.setItem('myJson', json)
+            document.getElementById('gicungduoc').style.display = 'block'
+            return false
+        }
+        function xac_nhan(){
+            document.getElementById('gicungduoc').style.display = 'none'
+        }
+    </script>
+</body>
+</html>

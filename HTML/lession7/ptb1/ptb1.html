@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            background-color: rgb(0, 26, 255);
+            color: white;
+            font-size: 50px;
+            width: 600px;
+        }
+        .main{
+            margin: 15px;
+        }
+        .button{
+            height: 30px;
+            background-color: rgb(84, 201, 84);
+            border: none;
+            border-radius: 5px;
+        }
+        .button:active{
+            background-color: rgba(84, 201, 84, 0.8);
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+            <p>Giải phương trình bậc 1</p>
+        </div>
+        <div class="main">
+            <button class="button" onclick="nhap_a()">Nhập giá trị a</button>
+            <button class="button" onclick="nhap_b()">Nhập giá trị b</button>
+            <button class="button" onclick="ket_qua(a, b)">Hiển thị kết quả</button>
+        </div>
+        <script>
+            var a, b, result
+            function nhap_a(){
+                a = parseInt(prompt('Nhập giá trị của a'))
+            }
+            function nhap_b(){
+                b = parseInt(prompt('Nhập giá trị của b'))
+            }
+            function ket_qua(a ,b){
+                if(a == 0){
+                    if(b == 0){
+                        alert('Phương trình có vô số nghiệm')
+                    }
+                    else{
+                        alert('Phương trình vô nghiệm')
+                    }
+                }
+                else{
+                    result = - b / a
+                    alert(result)
+                }
+            }           
+        </script>
+</body>
+</html>

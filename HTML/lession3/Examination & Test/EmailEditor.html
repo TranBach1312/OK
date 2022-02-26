@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+          #main {
+            display: inline-block;
+            margin-top: 50px;
+            margin-left: 35%;
+            background-color: rgb(143, 218, 228);
+            padding: 20px;
+        }
+        textarea{
+            scrollbar-3dlight-color: #C0C0C0;
+            scrollbar-shadow-color: silver;
+            scrollbar-arrow-color: black;
+            scrollbar-face-color: gray;
+        }
+        #help{
+            width: 420px;
+            margin-top: 1000px;
+            background-color: #cfc;
+            border: solid 2px #E4E7E7;
+            color: #303030;
+            position: absolute;
+            margin-left: 32.1%;
+        }
+</style>
+<body>
+    <form id="main" action="Status.html">
+    <table class="EmailEditor" style="margin-top: 50px;">
+        <h1 style="display: inline; ">Compose Email Message</h1> 
+        
+        <tr>
+            <td>To</td>
+            <td><input type="email" placeholder="In put your email"></td>
+        <tr>
+            <td>From</td>
+            <td><input type="email" placeholder="In put your email"></td>
+        </tr>
+        <tr>
+            <td>Cc</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td><textarea name="message" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Cancel"></td>
+        </tr>
+    </table>
+    
+    </form>
+    <a href="#help" style="margin-left: 50px; font-size: 30px; text-decoration: none; background-color: pink;">Help</a>
+    <div id="help">
+        <h1 style="text-align: center;">-: E-mail Editor Help :-</h1>
+        <ul style="list-style-type: square; font-size: 25px; margin: 20px;">
+            <li>
+                <b>To and Cc:</b> <br>
+                <b>To</b> and <b>Cc</b> boxes allow you to enter the e-mail andesses of the reccepients to whom to message has to be sent. Reccepients will be able to see who else was sent the message by looking at contents of the <b>To</b> and <b>Cc</b> boxes.  
+            </li>
+            <li>
+                <b>Subject: </b> <br>
+                The <b>Subject</b> box allow you to enter meaningful summary of the message.
+            </li>
+            <li>
+                <b>Message: </b> <br>
+                The <b>Message</b> TextArea allows you to enter the text of your message.
+            </li>
+            </ul>
+        <a href="#" style="margin-left: 350px; font-size: 30px; ">Close</a>
+    </div>
+
+</html>

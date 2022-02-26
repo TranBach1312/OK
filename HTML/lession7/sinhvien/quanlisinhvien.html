@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <style>
+        table{  
+            border-collapse: collapse;
+            border-spacing: 0px;
+            
+        }
+        #container td, #container th{        
+            border: 1px solid rgb(221, 220, 220);
+            padding: 5px;
+            width: 200px;
+            height: 30px;
+            text-align: start;
+        }
+        #tieude{
+            color: white;
+            background-color: rgb(117, 117, 253);
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <h3 id="tieude">Management Products</h3>
+        <div id="container"></div>
+    </div>
+    <script type="text/javascript">
+        var sinh_vien={
+            name : '',
+            age : '',
+            address : '',
+            email : ''
+        }
+        studentList = []
+        for(i = 0; i < 20; i++){
+            sinh_vien = {
+            name : 'Tran Van ' + i,
+            age : 20 + i,
+            address : 'Ha Noi ' + i,
+            email : i + '@gmail.com'
+            }
+            studentList.push(sinh_vien)
+        }
+        var tagTable = document.createElement("table")
+        var tagRow = document.createElement("tr")
+        var text = [document.createTextNode('STT'), document.createTextNode('Name'), document.createTextNode('Age'), document.createTextNode('Address'), document.createTextNode('Email')]
+        for(i = 0; i < 5; i++){
+            var tagColumn = document.createElement("th")
+            tagColumn.appendChild(text[i])
+            tagRow.appendChild(tagColumn)
+        }       
+        tagTable.appendChild(tagRow)
+        for(i = 0; i < 20; i++){
+            var tagRow = document.createElement("tr")
+            var textNode = []
+            textNode.push(document.createTextNode(i + 1) ,document.createTextNode(studentList[i].name), document.createTextNode(studentList[i].age), document.createTextNode(studentList[i].address), document.createTextNode(studentList[i].email))
+            for(j = 0; j < 5; j++){
+                var tagColumn = document.createElement("td")
+                tagColumn.appendChild(textNode[j])
+                tagRow.appendChild(tagColumn)
+            }
+            tagTable.appendChild(tagRow)
+        }
+        container = document.getElementById("container")
+        container.appendChild(tagTable)
+   </script>
+</body>
+</html>

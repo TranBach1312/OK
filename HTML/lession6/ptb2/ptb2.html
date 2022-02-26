@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2 cho người không biết dùng máy tính Casio</title>
+</head>
+<body>
+    <script>
+        var a = prompt('Nhập giá trị của a')
+        var b = prompt('Nhập giá trị của b')
+        var c = prompt('Nhập giá trị của c')
+        if(a == 0){
+            if(b == 0){
+                if(c == 0){
+                    alert('Phương trình này có vô số nghiệm')
+                }
+                else{
+                    alert('Phương trình này có số nghiệm là số người yêu bạn, tức là 0')
+                }
+            }
+            else{
+                alert('Phương trình có 1 nghiệm là: ' - parseInt(c) / parseInt(b))
+            }
+        }
+        else{
+            var delta = parseInt(b)*parseInt(b) - 4 * parseInt(a) * parseInt(c)
+            if(delta < 0){
+                alert('Không có ok?')
+            }
+            else if(delta == 0){
+                alert('Phương trình có nghiệm kép là: x = ' + -parseInt(b)/(2 * parseInt(a)))
+            }
+            else{
+                alert('Phương trình có 2 nghiệm phân biệt là x1 = ' + (-parseInt(b) + Math.sqrt(delta))/(2 * parseInt(a)) + 'và x2 = ' +  (-parseInt(b) - Math.sqrt(delta))/(2 * parseInt(a))) 
+            }
+        }
+    </script>
+</body>
+</html>

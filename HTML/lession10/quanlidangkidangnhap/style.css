@@ -1,0 +1,19 @@
+.container{
+    width: 40%;
+    background-color: wheat;
+    margin:20px auto ;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+.row label{
+    width: 20%;
+}
+.row input{
+    width: 51%;
+}
+#submit_id, #reset_id{
+    margin-right: 10px;
+    width: 25%;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web tin tức</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="img/Screenshot 2022-01-17 163031.png" alt="LÔ GÔ">
+        <span>web tin tức</span>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li onclick="anthem()"><a href="#">Trang chủ</a></li>
+            <li onclick="anthem()"><a href="#">Tin học</a></li>
+            <li onclick="anthem()"><a href="#">Biểu mẫu</a></li>
+            <li onclick="anthem()"><a href="#">Khoá học</a></li>
+            <li onclick="anthem()"><a href="#">Tuyển dụng</a></li>
+            <li onclick="anthem()"><a href="#">Liên hệ</a></li>
+            <li onclick="hienthithem()"><a href="#thembaiviet">Thêm bài viết mới(admin)</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="rightnav">
+            <h3>Bài viết mới nhất</h3>
+            <ul>
+                <li>Bài 1</li>
+                <li>Bài 2</li>
+                <li>Bài 3</li>
+                <li>Bài 4</li>
+                <li>Bài 5</li>
+            </ul>
+        </div>
+        <div id="content">
+            
+        </div>
+    </div>
+    <div id="thembaiviet">
+        <form action="#" method="post" onsubmit="return false">
+            <caption>Nhập thông tin bài viết</caption>
+            <div id="x" onclick="anthem()"><img src="img/kisspng-x-mark-symbol-cross-clip-art-x-mark-5ac194c760ed24.866024191522635975397.png" alt=""></div>
+            <div class="row">
+                <label for="title_id">Tiêu đề</label>
+                <input type="text" name="tieude" id="title_id">
+            </div>
+            <div class="row">
+                <label for="image_id">Hình ảnh</label>
+                <input type="url" name="hinhanh" id="image_id">
+            </div>
+            <div class="row">
+                <label for="maincontent">Nội dung</label>
+                <textarea name="noidungchinh" id="maincontent_id" cols="30" rows="10"></textarea>
+            </div>
+            <div class="row">
+                <button type="submit" onclick="anthem(), luubaiviet()">Lưu</button>
+                <button type="reset">Xoá</button>
+            </div>           
+        </form>
+    </div>
+
+
+
+    <script>
+        var them = document.getElementById('thembaiviet')
+        var tieude = document.getElementById('title_id'),
+        hinhanh = document.getElementById('image_id'),
+        noidungchinh = document.getElementById('maincontent_id')
+        var content = document.getElementById('content')
+        function hienthithem(){
+            them.style.display = 'block'
+        }
+        function anthem(){
+            them.style.display = 'none'
+        }
+        function luubaiviet(){
+            content.innerHTML += `
+            <div class="baiviet" style = "background-image: url(${hinhanh.value})">
+                
+                <h2 class="title_bv">${tieude.value}</h2> 
+            
+                <div class="noidung_bv"><p >${noidungchinh.value}</p></div>
+            </div>`
+        }
+    </script>
+</body>
+</html>

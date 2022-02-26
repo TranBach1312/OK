@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    background-color: wheat;
+}
+.header{
+    display: flex;
+    height: 30px;
+}
+.header img{
+    width: 10%;
+}
+.header span{
+    line-height: 30px;
+    margin-left: 30%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar{
+    height: 30px;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    background-color: rgb(91, 91, 248);
+    height: 30px;
+}
+.navbar ul li{
+    cursor: pointer;
+    border-right: 1px solid rgb(80, 148, 250) ;
+}
+.navbar ul li:hover{
+    background-color: rgb(70, 70, 252);
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    line-height: 30px; 
+}
+.main .rightnav{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    border: 2px solid black;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.main .rightnav ul {
+    list-style-type: none;
+    text-align: left;
+}
+#thembaiviet{
+    border: 2px solid black;
+    width: 40%;
+    display: none;
+    position: absolute ;
+    background-color: rgb(221, 221, 221);
+    top: 20px;
+    right: 30%;
+}
+#thembaiviet .row{
+    padding: 10px;
+    display: flex;
+}
+#x{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+}
+#x img{ 
+    width: 100%;
+    height: 100%;
+}
+.row label{
+    width: 30%;
+}
+.row input, .row textarea{
+    width: 70%;
+}
+.row button{
+    width: 50px;
+    height: 25px;
+    margin: 0px 10px;
+}
+#content{
+    width: 80%;
+
+}
+.baiviet{
+    /* display: table; */
+    width: 200px; 
+    height: 200px;
+    border: 1px solid black;
+    margin: 30px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(80%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.baiviet .title_bv{
+    position: relative;
+    top: 0px;   
+    margin: 0;
+    text-align: center;
+    
+}
+.baiviet .noidung_bv{
+    width: 200px;
+    height: 140px;
+    word-wrap: break-word;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}

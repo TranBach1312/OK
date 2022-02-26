@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng nhập</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="main">
+            <form action="" onsubmit="submitcheck()">
+                <h4>Đăng nhập hệ thống</h4>
+                <table>
+                    <tr>
+                        <th>Tài Khoản</th>
+                        <td><input type="text" id="account_id"></td>
+                    </tr>
+                    <tr>
+                        <th>Mật khẩu</th>
+                        <td><input type="password" id="password_id"></td>
+                    </tr>
+                </table>
+                <span>
+                    <button type="submit">Đăng nhập</button>
+                    <button type="reset">Nhập lại</button>
+                </span>
+            </form>
+        </div>
+        <script>
+        var accountTag = document.getElementById('account_id')
+        var passwordTag = document.getElementById('password_id')
+        function submitcheck(){
+        if(accountTag.value == ""|| passwordTag.value == ""){
+        alert('Vui lòng nhập đủ thông tin')
+        return false
+        }
+        else{
+        alert('Đăng nhập thành thụ')
+        return true
+        }
+        }
+        </script>
+    </body>
+</html>

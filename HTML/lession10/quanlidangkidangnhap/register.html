@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="post" onsubmit="return login()">
+    <div class="container">
+        <div class="header">
+            <div class="row">
+            <label for="name_id">Tên</label>
+            <input type="text" name="name" id="name_id">
+            </div>
+            <div class="row">
+            <label for="age_id">Tuổi</label>
+            <input type="age" name="age" id="age_id">
+            </div>
+            <div class="row">     
+            <label for="email_id">Email</label>
+            <input type="email" id="email_id" name="email">
+            </div>
+            <div class="row">
+                <label></label>
+                <input type="submit" value="Đăng nhập" id="submit_id" onclick="save()">
+                <input type="reset" value="Reset" id="reset_id">
+            </div>
+        </div> 
+    </div>
+</form>
+<script>
+    var nameTag = document.getElementById('name_id'), ageTag = document.getElementById('age_id'), emailTag = document.getElementById('email_id')
+    function save(){
+        localStorage.setItem('name', nameTag.value)
+        localStorage.setItem('age', ageTag.value)
+        localStorage.setItem('email', emailTag.value)
+        window.location = 'show.html'
+    }
+    function login(){
+        return false
+    }
+</script>
+</body>
+</html>

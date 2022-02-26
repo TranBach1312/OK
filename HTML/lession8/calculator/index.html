@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="calculator" id="calculator_id">
+    <div>
+        <table id="cal_id">
+            <tr>
+                <td colspan="4" style="height: 70px;"><input type="text" readonly value=""  id="result_id"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="button" value="+"class="giatri" onclick="nhan_gia_tri('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="giatri" onclick="nhan_gia_tri(1)"></td>
+                <td><input type="button" value="2" class="giatri" onclick="nhan_gia_tri(2)"></td>
+                <td><input type="button" value="3" class="giatri" onclick="nhan_gia_tri(3)"></td>
+                <td><input type="button" value="-" class="giatri" onclick="nhan_gia_tri('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="giatri" onclick="nhan_gia_tri(4)"></td>
+                <td><input type="button" value="5" class="giatri" onclick="nhan_gia_tri(5)"></td>
+                <td><input type="button" value="6" class="giatri" onclick="nhan_gia_tri(6)"></td>
+                <td><input type="button" value="*" class="giatri" onclick="nhan_gia_tri('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="giatri" onclick="nhan_gia_tri(7)"></td>
+                <td><input type="button" value="8" class="giatri" onclick="nhan_gia_tri(8)"></td>
+                <td><input type="button" value="9" class="giatri" onclick="nhan_gia_tri(9)"></td>
+                <td><input type="button" value="/" class="giatri" onclick="nhan_gia_tri('/')"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="0" class="giatri" onclick="nhan_gia_tri(0)"></td>
+                <td><input type="button" value="." class="giatri" onclick="nhan_gia_tri('.')"></td>
+                <td><input type="button" value="=" class="giatri" onclick="tinh()"></td>
+            </tr>
+        </table>
+    </div>
+</form>
+    <script>
+        var result = document.getElementById('result_id')
+        console.log(result.value)
+        function nhan_gia_tri(n){
+            result.value += [n]
+            console.log(result.value)
+        }       
+        function tinh(){
+            result.value = eval(result.value)
+        } 
+    </script>
+</body>
+</html>

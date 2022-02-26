@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ipdi">
+    <form>  
+        <p>Input Product's Detail Information</p>
+            <span>Product Name</span> <br>
+            <input type="text" id="productname_id"> <br>
+            <span>Category Name</span> <br>
+            <select name="categoryname" id="categoryname_id" disabled>
+            </select> <br>
+            <span>Price</span> <br>
+            <input required type="number" id="price_id" onkeyup="total_price()"> <br>
+            <span>Quantity</span> <br>
+            <input required type="number" id="quantity_id" onkeyup="total_price()"> <br>
+            <span>Total Price</span> <br>
+            <input type="number" id="totalprice_id" readonly> <br>
+            <span>Manufacturer Name</span> <br>
+            <select name="manufacturername" id="manufacturername_id" onchange="changecategory()"> <br>
+                <option value="">--Select--</option>
+                <option value="apple">Apple</option>
+                <option value="samsung">SamSung</option>
+                <option value="lg">LG</option>
+                <option value="sony">Sony</option>
+                <option value="google">Google</option>
+            </select> <br> <br>
+            <span><button type="button" onclick="updateData()">Add Product</button>
+            <button type="reset">Reset</button></span>     
+    </form>
+</div>
+    <div id="tableData">
+        <table id="managementproducts_id">
+            <caption>Management Products</caption>
+            <tr>
+                <th>No</th>
+                <th>Product Name</th>
+                <th>Category Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Manufacturer Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var productname = document.getElementById("productname_id")
+        var categoryname = document.getElementById("categoryname_id")
+        var quantity = document.getElementById('quantity_id')
+        var price = document.getElementById('price_id')
+        var totalprice = document.getElementById('totalprice_id')
+        var manufacturername = document.getElementById("manufacturername_id")
+        var managementproducts = document.getElementById("managementproducts_id")
+        function total_price(){
+            var q = quantity.value
+            var p = price.value
+            totalprice.value = q * p
+        }
+        var dataList = {
+            'apple': ["Iphone", "Macbook", "Ipod"],
+            'samsung':["Galaxy A51", "Galaxy A50s", "Galaxy A10s", "Galaxy A71"],
+            'lg': ["LG DualCool", "LG AI DD", "LG StandByMe"],
+            'sony': ["Sony Experia", "Sony WF", "Sony XZ2", "PS5"],
+            'google': ["Xbox", "Google Nest Mini", "Google Pixel 6"]
+        }
+        
+       
+        function changecategory(){          
+                manufacturer = manufacturername.value
+                categoryname.disabled = false
+                categoryname.innerHTML = '<option>--Select--</option>'
+                for(i = 0; i < dataList.apple.length; i++){
+                    categoryname.innerHTML += `<option>${dataList[manufacturer][i]}</option>`
+                }
+        }
+        
+        var index = 0
+        function updateData(){
+            index ++
+            var userData = [index, productname.value, categoryname.value, price.value, quantity.value, manufacturername.value]
+            var newRow = document.createElement('tr')
+            var newbox, newdata
+            for(i = 0; i < 6; i++){
+                newbox = document.createElement('td')
+                newdata = document.createTextNode(userData[i])
+                newbox.appendChild(newdata)
+                newRow.appendChild(newbox)
+            }
+            newbox = document.createElement('td')
+            newbox.innerHTML = "<button id = 'edit_id' onclick = 'edit()'>Edit</button>"
+            newRow.appendChild(newbox)
+            newbox = document.createElement('td')
+            newbox.innerHTML = "<button id = 'delete_id' onclick = 'delete()'>Delete</button>"
+            newRow.appendChild(newbox)
+            managementproducts.appendChild(newRow)
+        }
+        function edit(){
+            
+        }
+        </script>
+</body>
+</html>

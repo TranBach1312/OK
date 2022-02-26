@@ -1,0 +1,70 @@
+
+body{
+    background-color: white;
+}
+#managementproducts_id{
+    border-collapse: collapse;
+    
+}
+#managementproducts_id td, #managementproducts_id th{
+    border: 1px solid rgb(202, 202, 202);
+    width: 150px;
+    text-align: start;
+    height: 40px;
+}
+#managementproducts_id td button{
+    position: relative;
+    background-color: rgb(118, 118, 248);
+    width: 50px;
+    height: 30px;
+    left: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+#managementproducts_id td button:hover{
+    background-color: blue;
+}
+#tableData {
+    margin-top: 50px;
+}
+#ipdi{
+    width: 60%;
+    border: 1px solid rgb(111, 238, 232);
+}
+#ipdi button{
+    background-color: orange;
+    position: relative;
+    height: 30px;
+    left: 20px;
+    bottom: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#ipdi button:hover{
+    background-color: rgb(255, 197, 89);
+}
+/* #ipdi form{
+    position: relative;
+    left: 20px;
+} */
+#ipdi input, #ipdi select{
+    height: 30px;
+}
+caption, #ipdi p{
+    margin-bottom: 100px;
+    background-color: rgb(111, 238, 232);
+    width: 100%;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+#tableData, #ipdi{
+    border: 1px solid rgb(111, 238, 232);
+    border-radius: 10px;
+    display: table;
+    /* padding: 100px; */
+}

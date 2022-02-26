@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 5px 10px;
+}
+.logo{
+    width: 100%;
+}
+.navbar{
+    background-color: rgb(80, 223, 111);
+    display: inline-block;
+    width: 100%;
+}
+.navbar .search{
+    float: right;
+    background-color: orange;
+    padding: 10px;
+    width: 30%;
+}
+.navbar .search input{
+    width: 200px;
+    outline: none;
+}
+.navbar .search input:focus{
+    border: 2px double aqua ;
+    transition: 0.5s;
+}
+.navbar .search button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 3px 5px;
+    margin-right: 10px;
+}
+.navbar .search button:active{
+    background-color: gainsboro;
+}
+.navbar .menu{
+    float: left;
+    width: 65%;
+}
+.navbar .menu ul{
+    display: flex;
+    list-style-type: none;
+}
+.navbar .menu ul li{
+    padding: 10px;
+
+    border-right: 1px solid white;
+}
+.navbar .menu ul li:hover{
+    background-color: rgb(65, 184, 91);
+}
+.navbar .menu ul li a{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+section{
+    display: inline-block;
+    width: 100%;
+}
+.main{
+    float: left;
+    width: 65%;
+    background-color: orange;
+}
+.menu-right{
+    float: right;
+    width: 30%;
+   padding: 10px;
+   border-left: 1px solid rgb(209, 209, 209);
+}
+.menu-right .box{
+   
+    margin: 5px 0px;
+}
+.menu-right .box ul{
+    list-style-type: none;
+    margin: 10px;
+    
+}
+.menu-right .box ul li{
+    border-bottom: 1px solid rgb(245, 238, 238);
+    padding-bottom: 3px;
+}
+.menu-right .box ul li a{
+    text-decoration: none;
+    color: green;
+}
+.menu-right .box h5{
+    background-color: rgb(80, 223, 111);
+    border-radius: 4px 0px;
+    text-indent: 10px;
+}

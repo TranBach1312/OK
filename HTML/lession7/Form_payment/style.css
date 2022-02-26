@@ -1,0 +1,32 @@
+
+#main{
+    display: table;
+    background-color: rgb(159, 209, 255);
+    border: 1px solid gray;
+}
+.creditnumber{
+    width: 30px;
+} 
+div{
+    display: flexbox;
+}
+.table_hightlight{
+    border: 1px solid grey;
+    display: table;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+.table_hightlight td{
+    border: 1px double blue;
+    width: 200px;
+}
+.table_hightlight table{
+    border: 1px solid blue;
+}
+textarea{
+    width: 190px;
+    height: 30px;
+}
+textarea:focus, input:focus{
+    background-color: rgb(180, 255, 233);
+}

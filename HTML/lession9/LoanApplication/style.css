@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(255, 230, 230);
+}
+#personal, #employment, #loaninformation{
+    border: 2px solid brown;
+    margin-top: 20px;
+}
+table{
+    position: relative;
+    background-color: pink;
+    margin: 10px;
+    width: 97%;
+}
+.title{
+    color: blue;
+}
+h3{
+    color: blue;
+}

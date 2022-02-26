@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sô</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="register.html">Đăng kí</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="dataTable">
+        <table>
+            <thead>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Password</th>
+            </thead>
+            <tbody id="show_here">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var myJson = JSON.parse(localStorage.getItem('myJson')),
+        dataList = []
+        if(myJson != '' && myJson != null){
+            dataList = myJson
+        }
+        for(i = 0; i < dataList.length; i++){
+            document.getElementById('show_here').innerHTML += `<tr>
+                <td>${i + 1}</td>
+                <td>${dataList[i].name}</td>
+                <td>${dataList[i].age}</td>
+                <td>${dataList[i].email}</td>
+                <td>${dataList[i].password}</td>
+                </tr>`
+        }
+    </script>
+</body>
+</html>

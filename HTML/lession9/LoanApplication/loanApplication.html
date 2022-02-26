@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vay tiền ăn tết đê</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Loan Applicationn Form</h3>
+    <div id="main">
+        <form method="post">
+        <fieldset id="personal">
+            <legend class="title">Applicant's Personal Infomation</legend>
+            <table>
+                <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth(dd/mm/yyyy):</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="tel" minlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>ZipCode:</td>
+                    <td><input type="text" size="12" maxlength="12" placeholder="xxx-xxxx-xxx" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset id="employment">
+            <legend class="title">Applicant's Employment Information</legend>
+            <table>
+                <tr>
+                    <td>Current Employer:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Employer Address:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Date Of Joining(dd/mm/yyyy):</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="tel" minlength="10"></td>
+                </tr>
+                <tr>
+                    <td>E-mail ID:</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td><input type="text" placeholder="xxx-xxxxxxx"></td>
+                </tr>
+                <tr>
+                    <td>Designation:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Annual Income($):</td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset id="loaninformation">
+            <legend class="title">Loan Information</legend>
+            <table>
+                <tr>
+                    <td>Loan Type:</td>
+                    <td><select name="" id="">
+                        <option value="">--Select--</option>
+                        <option value="personalloan">Personal Loan</option>
+                        <option value="homeloan">Home Loan</option>
+                        <option value="vehicleloan">Vehicle Loan</option>
+                        <option value="businessloan">Business Loan</option>
+                        <option value="educationloan">Education Loan</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Principal</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Period(Month):</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Interest(%):</td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <span>
+            <button type="submit" name="Submit">Submit</button>
+            <button type="reset" name="Reset">Reset</button>
+        </span>
+    </form>
+</body>
+</html>

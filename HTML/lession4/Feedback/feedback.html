@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(233, 229, 229);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .bc{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(99, 37, 214);
+        }
+        input{
+            background-color: rgba(0, 0, 0, 0%);
+            width: 100px;
+            border: 0;
+            border-bottom: 1px solid grey;
+            
+        }
+        input:focus{
+            outline: 0;
+            width: 440px;
+            border-bottom:1px solid #7563df;
+            transition: 0.5s;
+        }
+        #form{
+            border: 1px grey solid;
+            border-top: 5px solid rgb(187, 136, 211);
+            display: block;
+            margin: auto;
+            margin-top: -50px;
+            background-color: white;
+            padding: 20px;
+            width: 450px;
+            height: 500px;
+        }
+        #submit{ 
+            margin-top: 50px;
+            width: 80px;
+            height: 30px; 
+            text-align: center;
+            background-color: rgb(54, 121, 247);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bc"></div>
+    <div id="form">
+        <form action="thanks.html">
+            <h1>Exemple Feedback Form</h1>
+            <h5 style="font-weight: normal;font-style: italic;">Enter your feedback and enquiries here.</h5>
+            <br> <br>
+            <p>
+                Email adress <br> <br>
+                <input type="email" >
+            </p>
+            <p>Please tell us your feedback: <br> <br>
+            <input type="text"></p>
+            <button type="submit" id="submit">SUBMIT</button>
+            <h6 style="color: grey; font-size: 10px;">Never submit passwords through Google Forms.</h6>
+        </form>
+    </div>
+</body>
+</html>

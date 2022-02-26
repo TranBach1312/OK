@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+      background-color: steelblue;
+        }
+        #job{
+            padding: 20px;
+            background-image: url(https://znews-stc.zdn.vn/static/topic/company/Shark_Tank_Logo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: table;
+        }
+        input{
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+        }
+        table{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="job">
+        <h1>Registration Form - Job Seekers</h1>
+        <form action="thankyou.html" >
+            <table cellspacing="10px" >
+                <tr>
+                    <td>Login name</td>
+                    <td><input type="text" placeholder="Tên đăng nhập" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Mật khẩu" required></td>
+                </tr>
+                <tr>
+                    <td>Re-Enter Password</td>
+                    <td><input type="password" name="password" placeholder="Nhập lại mật khẩu" required></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender">Male<input type="radio" name="gender" required>Female <input name="gender" type="radio">Bach</td>
+                </tr>
+                <tr>
+                    <td>Experiece (In year)</td>
+                    <td>
+                        <select name="Experiece" required>
+                            <option>Select.....</option>
+                            <option>0-1</option>
+                            <option>1-2</option>
+                            <option>2-3</option>
+                            <option>3+</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Register</button></td>
+                    <td><button type="reset">Cancel</button></td>
+                </tr>
+            </table>
+        </form></div>
+</body>
+</html>

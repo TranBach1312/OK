@@ -1,0 +1,130 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(252, 249, 249);
+    font-family: Arial, Helvetica, sans-serifs;
+}
+.header, .menu, .main{
+    width: 90%;
+}
+.header{
+    display: flex;
+    background-color: white;
+}.logo{
+    height: 80px;
+}.search{
+    height: 40px;
+    width: 300px;
+    margin: 20px 100px;
+    outline: none;
+    border-radius: 30px;
+}
+.tuy-chon{
+    list-style-type: none;
+    display: flex;
+    margin: 32px 0px;
+    border-right: 1px solid black;
+} 
+.tuy-chon li{
+    margin: 0 20px 0 0; 
+}
+.tuy-chon li a{
+    margin-top: 1px;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+.tuy-chon li a:hover{
+    color: orange;
+}
+.sign-in:hover, .sign-up:hover{
+    opacity: 50%;
+}
+.sign-in, .sign-up{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.sign-in{
+    background-color: rgb(114, 180, 241);
+}
+.sign-up{
+    background-color: rgb(247, 187, 75);
+}
+.right-menu{
+    width: 10%;
+    height: 100%;
+    right:0;
+    position: absolute;
+    background-color: white;
+    margin-top: -100px;
+}
+.menu{
+    background-color: #e77a1b;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+.menu a{
+    text-decoration: none;
+    width: 80px;
+    padding: 18px 10px;
+    color: white;
+}
+.menu a:hover{
+    background-color: #ecaa71;
+}
+.hienthiTL, .hienthiSX{
+    margin-top: 13px;
+    left: 100px;
+    top: 119px;
+    display: none;
+    color: black;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    
+}
+.theloai:hover ~ .hienthiTL, .sapxep:hover ~ .hienthiSX{
+    display: block;
+}
+.hienthiTL:hover, .hienthiSX:hover{
+    display: block;
+}
+.hienthiTL table, .hienthiSX table{
+    border-spacing: 10px;
+}
+.hienthiTL td:hover, .hienthiSX td:hover{
+    color: orange;
+    cursor: pointer;
+    background-color: rgb(231, 229, 229);
+}
+.hienthiSX{
+    left: 200px; 
+}
+.navbar{
+    margin-left: 100px;
+}
+.logo-2{
+    top: 100px;
+    width: 50px;
+    position: absolute;
+    left: 50px;
+}
+.main img{
+    filter:brightness(60%);
+    display: inline-flex;
+    z-index: 1;
+}
+h3{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    color: white;
+    text-shadow: 5px 2px 4px rgb(224, 224, 224);
+}

@@ -1,0 +1,68 @@
+body{
+    background-color: wheat;
+    padding: 0;
+    margin: 0;
+}
+#header{
+    width: 100%;
+}
+#top .logo{
+    width: 130px;
+    margin-left: 100px;
+}
+#head-menu{
+    height: 50px;
+    background-color: tomato;
+
+}
+#head-menu .navbar{
+    margin-left: 200px;
+    display: flex;
+}
+#head-menu a{
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    padding: 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#head-menu a:hover{
+    background-color: rgb(255, 141, 121);
+}
+#right-menu{
+    position: absolute;
+    right: 0px;
+    width: 20%;
+}
+#right-menu .search{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+#main{
+    margin-left: 50px;
+    width: 80%;
+}
+#main .baiviet{
+    display: flex;
+    margin: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+#main .baiviet .anhbaiviet{
+    width: 300px;
+    margin-right: 100px;
+}
+#main .baiviet .mota{
+    width: 500px;
+    line-height: 30px;
+}
+#main .baiviet .mota .docbai{
+    color: red;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}

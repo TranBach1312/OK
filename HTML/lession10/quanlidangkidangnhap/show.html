@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Ỷou Name</td>
+            <td><input type="text" id="name_id" readonly></td>
+        </tr>
+        <tr>
+            <td>Ỷou tuổi</td>
+            <td><input type="text" id="age_id" readonly></td>
+        </tr>
+        <tr>
+            <td>Ỷou email</td>
+            <td><input type="text" id="email_id" readonly></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var nameTag = document.getElementById('name_id'), ageTag = document.getElementById('age_id'), emailTag = document.getElementById('email_id')
+        nameTag.value = localStorage.getItem('name')
+        ageTag.value = localStorage.getItem('age')
+        emailTag.value = localStorage.getItem('email')
+    </script>
+</body>
+</html>

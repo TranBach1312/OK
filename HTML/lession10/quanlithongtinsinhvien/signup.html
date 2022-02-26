@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" onsubmit="return login()">
+    <div class="container">
+        <div class="header">
+            <span>SignUp</span>
+        </div>
+        <div class="main">
+            <div class="row">
+                <label for="username_id">User name</label> <br>
+                <input type="text" id="username_id" value="">
+            </div>
+            <div class="row">
+                <label for="fullname_id">Full name</label> <br>
+                <input type="text" id="fullname_id" value="">
+            </div>
+            <div class="row">
+                <label for="email_id">Email</label> <br>
+                <input type="email" id="email_id" value="">
+            </div>
+            <div class="row">
+                <label for="birthday_id">Birthday</label> <br>
+                <input type="date" id="birthday_id" value="">
+            </div>
+            <div class="rowbutton">
+                <input type="submit" id="save_id" value="Save">
+                <input type="reset" id="reset_id" value="Reset">
+            </div>
+        </div>
+    </div>
+</form>
+    <div class="dataList">
+        <table >
+            <tr>
+                <th>No</th>
+                <th>User name</th>
+                <th>Full name</th>
+                <th>Email</th>
+                <th>Birthday</th>
+                <th style="width: 50px;"></th>
+                <th style="width: 50px;"></th>
+            </tr>
+            <tbody id="tableData"></tbody>
+        </table>
+    </div>
+
+    <script>
+        var usernameTag = document.getElementById('username_id'), 
+        fullnameTag = document.getElementById('fullname_id'),
+        emailTag = document.getElementById('email_id'),
+        birthdayTag = document.getElementById('birthday_id'),
+        tableListTag = document.getElementById('tableData')
+        var list = [], check = -1
+        var myJSON, myList
+        myJSON = localStorage.getItem('myJSON')
+        if(myJSON != null){
+            
+            list = JSON.parse(myJSON)
+            update()
+        }
+        function login(){
+            var data = {
+                'username': usernameTag.value,
+                'fullname': fullnameTag.value,
+                'email': emailTag.value,
+                'birthday': birthdayTag.value
+            }
+            if(check < 0){
+                list.push(data)            
+            }
+            else{               
+                list.splice(check, 1, data)    
+                check = -1
+            }
+            
+            update()
+           
+            return false
+        }
+        function update(){
+            tableListTag.innerHTML = ''
+            for(i = 0; i < list.length; i++){
+                
+                tableListTag.innerHTML += `<tr>
+                    <td>${i + 1}</td>
+                    <td value = '${list[i].username}'>${list[i].username}</td>
+                    <td value = '${list[i].fullname}'>${list[i].fullname}</td>
+                    <td value = '${list[i].email}'>${list[i].email}</td>
+                    <td value = '${list[i].birthday}'>${list[i].birthday}</td>
+                    <td><button class="Edit" onclick="editData(${i})">Edit</button></td>
+                    <td><button class="Delete" onclick = "deleteData(${i})">Delete</button></td>
+                    </tr>`
+            }
+            myJSON = JSON.stringify(list)
+            localStorage.setItem('myJSON', myJSON)  
+        }
+        function deleteData(n){
+            list.splice(n, 1)
+            
+            update()
+        }
+        function editData(n){
+            usernameTag.value = list[n].username
+            fullnameTag.value = list[n].fullname
+            emailTag.value = list[n].email
+            birthdayTag.value = list[n].birthday
+            check = n
+        }
+    </script>
+</body>
+</html>

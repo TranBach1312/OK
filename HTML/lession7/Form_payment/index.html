@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+<form>   
+        <p style="background-color: rgb(211, 211, 211); color: rgb(86, 86, 252); display: table;">Purchase Order Form</p>
+        <div class="table_hightlight">
+            <p>Product Information</p>
+            <table>           
+            <tr>
+                <td>Product: </td>
+                <td><select name="Product" id="product_id" onchange="updateProduct()">
+                    <option value="">--Select--</option>
+                    <option value="650">Comfort Sleeper</option>
+                    <option value="975">Morgan Kids Bed</option>
+                    <option value="480">Entertainment Cabinet</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Unit Price($):</td>
+                <td><input type="number" id="unitprice_id" disabled placeholder="0"></td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td><input type="number" id="quantity_id" disabled placeholder="0" onkeyup="updateQuantity()"></td>
+            </tr>
+            <tr>
+                <td>Total Price($):</td>
+                <td><input type="number" id="totalprice_id" disabled placeholder="0"></td>
+            </tr>
+        </table>
+        </div>
+        <div class="table_hightlight">
+            <p>Shipping Information</p>
+            <table>           
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" id="fullname_id"></td>
+            </tr>
+            <tr>
+                <td>Shipping Address:</td>
+                <td><textarea name="" id="" cols="30" rows="10" itemid="shippingaddess_id"></textarea></td>
+            </tr>
+            <tr>
+                <td>Credit Card:</td>
+                <td><select id="creditcard_id" onchange="updateCreditcard()">
+                    <option value="">--Select--</option>
+                    <option value="650">VISA</option>
+                    <option value="975">Master Card</option>
+                    <option value="480">American Express</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Credit Number:</td>
+                <td><input type="text" pattern="[0-9]{4}" maxlength="4" class="creditnumber" disabled>-<input type="text" class="creditnumber" pattern="[0-9]{4}" maxlength="4" disabled>-<input type="text" pattern="[0-9]{4}" maxlength="4" class="creditnumber" disabled>-<input type="text" pattern="[0-9]{4}" maxlength="4" class="creditnumber" disabled></td>
+            </tr>
+        </table>
+        
+        <span><button type="submit">Submit</button>
+        <button type="reset">Reset</button></span>  
+</div>
+</form>
+</div>
+
+<script>
+    var product = document.getElementById('product_id')
+    var unitPrice = document.getElementById('unitprice_id')
+    var quantity = document.getElementById('quantity_id')
+    var totalPrice = document.getElementById('totalprice_id')
+    var fullName = document.getElementById('fullname_id')
+    var shippingAddress = document.getElementById('shippingaddress_id')
+    var creditCard = document.getElementById('creditcard_id')
+    var creditNumber = document.getElementsByClassName('creditnumber')
+    function updateProduct(){
+        
+        if(product.value != ''){
+            unitPrice.value = product.value
+            quantity.disabled = false
+        }
+        else{
+            quantity.disabled = true
+        }
+    }
+    function updateQuantity(){
+        totalPrice.value = quantity.value * unitPrice.value
+    }
+    function updateCreditcard(){
+        
+        if(creditNumber.value != ''){
+            for(i = 0; i < creditNumber.length; i++){
+                creditNumber[i].disabled = false
+        }}
+        else{
+            for(i = 0; i < creditNumber.length; i++){
+                creditNumber[i].disabled = true
+            }
+    }}
+</script>
+</body>
+</html>

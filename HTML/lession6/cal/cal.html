@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Máy tính</title>
+</head>
+<body>
+    <script>
+        var a = prompt('Nhập giá trị a', 0)
+        var b = prompt('Nhập giá trị b', 0)
+        var tt = prompt('Nhập phép tính muốn thực hiện')
+        var result;
+        switch(tt){
+            case '+':{
+                result = parseInt(a) + parseInt(b)
+                alert(result)
+                break
+            }
+            case '-':{
+                result = parseInt(a) - parseInt(b)
+                alert(result)
+                break
+            }
+            case '*':{
+                result = parseInt(a) * parseInt(b)
+                alert(result)
+                break
+            }
+            case '/':{
+                if(b == 0){
+                    alert('Không chia được cho 0!!')
+                }
+                else{
+                result = parseInt(a) / parseInt(b)
+                alert(result)}
+                break
+            }
+            default:{
+                alert('Không có phép tính này ok??')
+            }
+        }
+    </script>
+</body>
+</html>

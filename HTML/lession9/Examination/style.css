@@ -1,0 +1,15 @@
+#main{
+    background-color: #FFFFCC;
+    color: #0000CC;
+    font: Arial;
+    display: table;
+}
+#main form{
+    margin: 20px;
+}
+body{
+    background-color: gray;
+}
+th{
+    color: #000066;
+}
